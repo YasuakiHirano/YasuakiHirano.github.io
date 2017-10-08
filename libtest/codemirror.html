@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>yasuaki.hirano github.io | codemirror Test</title>
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/codemirror/lib/codemirror.js"></script>
+        <script src="../bower_components/codemirror/addon/display/fullscreen.js"></script>
+        <script src="../bower_components/codemirror/addon/dialog/dialog.js"></script>
+        <script src="../bower_components/codemirror/addon/search/search.js"></script>
+        <script src="../bower_components/codemirror/addon/search/searchcursor.js"></script>
+        <script src="../bower_components/codemirror/addon/scroll/annotatescrollbar.js"></script>
+        <script src="../bower_components/codemirror/addon/search/matchesonscrollbar.js"></script>
+        <script src="../bower_components/codemirror/addon/search/jump-to-line.js"></script>
+        <script src="../bower_components/codemirror/addon/hint/show-hint.js"></script>
+        <script src="../bower_components/codemirror/addon/hint/xml-hint.js"></script>
+        <script src="../bower_components/codemirror/addon/hint/html-hint.js"></script>
+        <script src="../bower_components/codemirror/addon/hint/xml-hint.js"></script>
+        <script src="../bower_components/codemirror/addon/hint/html-hint.js"></script>
+        <script src="../bower_components/codemirror/mode/xml/xml.js"></script>
+        <script src="../bower_components/codemirror/mode/javascript/javascript.js"></script>
+        <script src="../bower_components/codemirror/mode/css/css.js"></script>
+        <script src="../bower_components/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+        <link rel="stylesheet" href="../bower_components/codemirror/lib/codemirror.css" />
+        <link rel="stylesheet" href="../bower_components/codemirror/addon/display/fullscreen.css" />
+        <link rel="stylesheet" href="../bower_components/codemirror/addon/dialog/dialog.css">
+        <link rel="stylesheet" href="../bower_components/codemirror/addon/search/matchesonscrollbar.css">
+        <link rel="stylesheet" href="../bower_components/codemirror/addon/hint/show-hint.css">
+        <style>
+            .CodeMirror{
+                border:1px #888 solid;
+            }
+        </style>
+    </head>
+    <script>
+        $(function(){
+          var editor = CodeMirror.fromTextArea(document.getElementById("codemirror"), {
+            mode:"text/html",
+            lineNumbers: true,
+            extraKeys: {
+             "F11": function(cm) {
+               cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+             },
+             "Esc": function(cm) {
+               if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+             },
+             "Alt-F": "findPersistent",
+             "Ctrl-Space": "autocomplete"
+           }
+         })
+        });
+    </script>
+    <body>
+        <textarea id="codemirror"></textarea>
+    </body>
+</html>

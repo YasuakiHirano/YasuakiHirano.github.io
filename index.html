@@ -1,21 +1,32 @@
 <html>
     <head>
         <title>yasuaki.hirano github.io</title>
-        <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-        <script src="./bower_components/codemirror/lib/codemirror.js"></script>
-        <script src="./bower_components/codemirror/addon/display/fullscreen.js"></script>
-        <link rel="stylesheet" href="./bower_components/codemirror/lib/codemirror.css" />
-        <link rel="stylesheet" href="./bower_components/codemirror/addon/display/fullscreen.css" />
+        <link rel="stylesheet" type="text/css" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <meta charset="UTF-8" />
     </head>
-    <script>
-        $(function(){
-          var editor = CodeMirror.fromTextArea($("#codemirror"), {
-            lineNumbers: true
-          });
-        });
-    </script>
-    <body>
-        hello.<br/>
-        <textarea id="codemirror"></textarea>
+   <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">yasuaki github.io</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <h3>Profile</h3>
+                <ul>
+                    <li>name:yasuaki</li>
+                    <li>age:28</li>
+                    <li>jobs:programmer</li>
+                </ul>
+                <h3>Library Tests</h3>
+                <ul>
+                    <li><a href="./libtest/codemirror.html">codemirror test</a></li>
+                </ul>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
     </body>
 </html>

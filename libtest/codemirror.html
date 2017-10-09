@@ -45,7 +45,8 @@
              "Alt-F": "findPersistent",
              "Ctrl-Space": "autocomplete"
            }
-         })
+         });
+         editor.on('change', function(){ editor.save(); });
         });
     </script>
     <body>
